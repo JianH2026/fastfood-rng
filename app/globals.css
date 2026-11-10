@@ -1,26 +1,135 @@
 @import "tailwindcss";
+@plugin "daisyui" {
+  themes: false;
+}
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Custom "diner" theme: ketchup red, mustard yellow, cream paper, burger-bun brown. */
+@plugin "daisyui/theme" {
+  name: "diner";
+  default: true;
+  color-scheme: light;
+  --color-base-100: oklch(98% 0.02 88);
+  --color-base-200: oklch(94% 0.045 85);
+  --color-base-300: oklch(88% 0.07 80);
+  --color-base-content: oklch(27% 0.045 45);
+  --color-primary: oklch(58% 0.22 27);
+  --color-primary-content: oklch(98% 0.02 88);
+  --color-secondary: oklch(85% 0.17 90);
+  --color-secondary-content: oklch(27% 0.045 45);
+  --color-accent: oklch(70% 0.19 140);
+  --color-accent-content: oklch(22% 0.05 140);
+  --color-neutral: oklch(27% 0.045 45);
+  --color-neutral-content: oklch(96% 0.03 88);
+  --color-info: oklch(72% 0.17 55);
+  --color-info-content: oklch(25% 0.05 55);
+  --color-success: oklch(70% 0.17 150);
+  --color-success-content: oklch(20% 0.05 150);
+  --color-warning: oklch(82% 0.17 75);
+  --color-warning-content: oklch(27% 0.045 45);
+  --color-error: oklch(58% 0.22 27);
+  --color-error-content: oklch(98% 0.02 88);
+  --radius-selector: 1rem;
+  --radius-field: 1rem;
+  --radius-box: 1.5rem;
+  --border: 3px;
+  --depth: 0;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-lilita), "Arial Black", sans-serif;
+  --font-sans: var(--font-nunito), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Gingham tablecloth */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-nunito), system-ui, sans-serif;
+  background-color: var(--color-base-200);
+  background-image:
+    linear-gradient(90deg, oklch(58% 0.22 27 / 0.16) 50%, transparent 50%),
+    linear-gradient(oklch(58% 0.22 27 / 0.16) 50%, transparent 50%);
+  background-size: 56px 56px;
+}
+
+/* Chunky sticker-style card with a hard offset shadow */
+.diner-card {
+  background: var(--color-base-100);
+  border: 4px solid var(--color-neutral);
+  border-radius: 1.5rem;
+  box-shadow: 7px 7px 0 var(--color-neutral);
+}
+
+/* Title lettering */
+.diner-title {
+  font-family: var(--font-lilita), "Arial Black", sans-serif;
+  color: var(--color-primary);
+  -webkit-text-stroke: 2px var(--color-neutral);
+  paint-order: stroke fill;
+  text-shadow: 4px 4px 0 var(--color-secondary), 6px 6px 0 var(--color-neutral);
+  letter-spacing: 0.02em;
+}
+
+/* Paper receipt with a torn zigzag bottom edge */
+.receipt-wrap { filter: drop-shadow(5px 6px 0 oklch(27% 0.045 45 / 0.85)); }
+.receipt {
+  background: #fffdf4;
+  font-family: ui-monospace, "Courier New", monospace;
+  padding: 1.5rem 1.5rem 2.25rem;
+  --s: 14px;
+  -webkit-mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / var(--s) 100%;
+  mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50% / var(--s) 100%;
+}
+.receipt-line { display: flex; align-items: baseline; gap: 0.5rem; }
+.receipt-line .dots { flex: 1; border-bottom: 2px dotted oklch(27% 0.045 45 / 0.4); transform: translateY(-4px); }
+
+/* Scrolling emoji ticker */
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-track { display: flex; width: max-content; animation: marquee 28s linear infinite; }
+
+/* ---- Custom animations ---- */
+@keyframes pop {
+  0% { transform: scale(0.4) rotate(-6deg); opacity: 0; }
+  60% { transform: scale(1.15) rotate(2deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0); }
+}
+@keyframes wobble {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(-4deg) scale(1.03); }
+  75% { transform: rotate(4deg) scale(1.03); }
+}
+@keyframes slide-up {
+  from { transform: translateY(24px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes shine {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes float-up {
+  from { transform: translateY(0) rotate(0); opacity: 1; }
+  to { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+.animate-pop { animation: pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both; }
+.animate-wobble { animation: wobble 0.18s linear infinite; }
+.animate-slide-up { animation: slide-up 0.45s ease-out both; }
+.shine-text {
+  background: linear-gradient(90deg, currentColor 30%, #fbbf24 50%, currentColor 70%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shine 2.5s linear infinite;
+}
+.confetti-piece {
+  position: fixed;
+  bottom: -40px;
+  font-size: 2rem;
+  pointer-events: none;
+  animation: float-up var(--dur, 4s) linear forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-pop, .animate-wobble, .animate-slide-up, .shine-text, .confetti-piece, .marquee-track {
+    animation: none;
+  }
 }

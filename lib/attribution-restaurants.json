@@ -1,0 +1,110 @@
+[
+  {
+    "restaurant": "McDonald's",
+    "status": "ok",
+    "file": "mcdonald-s.jpg",
+    "commonsTitle": "File:McDonald's Walsrode exterior 2026.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:McDonald%27s_Walsrode_exterior_2026.jpg",
+    "license": "CC BY-SA 3.0",
+    "author": "Steffen Mokosch"
+  },
+  {
+    "restaurant": "Burger King",
+    "status": "ok",
+    "file": "burger-king.jpg",
+    "commonsTitle": "File:Burger King exterior in Houston, TX.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Burger_King_exterior_in_Houston,_TX.jpg",
+    "license": "CC BY 4.0",
+    "author": "Quintin Soloviev"
+  },
+  {
+    "restaurant": "Wendy's",
+    "status": "ok",
+    "file": "wendy-s.jpg",
+    "commonsTitle": "File:Exterior view, Groveton Wendy's 2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Exterior_view,_Groveton_Wendy%27s_2.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Ser Amantio di Nicolao"
+  },
+  {
+    "restaurant": "Chick-fil-A",
+    "status": "ok",
+    "file": "chick-fil-a.jpg",
+    "commonsTitle": "File:Chick-fil-A fast food chain restaurant exterior in Cornelia, Georgia.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Chick-fil-A_fast_food_chain_restaurant_exterior_in_Cornelia,_Georgia.jpg",
+    "license": "CC BY 4.0",
+    "author": "Harrison Keely"
+  },
+  {
+    "restaurant": "Taco Bell",
+    "status": "ok",
+    "file": "taco-bell.jpg",
+    "commonsTitle": "File:Exterior of a modern Taco Bell fast food restaurant chain location in Murphy, North Carolina 02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Exterior_of_a_modern_Taco_Bell_fast_food_restaurant_chain_location_in_Murphy,_North_Carolina_02.jpg",
+    "license": "CC BY 4.0",
+    "author": "Harrison Keely"
+  },
+  {
+    "restaurant": "KFC",
+    "status": "ok",
+    "file": "kfc.jpg",
+    "commonsTitle": "File:Former KFC in Eufaula, AL.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Former_KFC_in_Eufaula,_AL.jpg",
+    "license": "CC0",
+    "author": "FLGALine1999"
+  },
+  {
+    "restaurant": "Subway",
+    "status": "ok",
+    "file": "subway.jpg",
+    "commonsTitle": "File:Subway restaurant in Crystal River, Florida.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Subway_restaurant_in_Crystal_River,_Florida.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Gerardo Moya for Getty Images"
+  },
+  {
+    "restaurant": "Popeyes",
+    "status": "ok",
+    "file": "popeyes.jpg",
+    "commonsTitle": "File:Popeyes on Lake Bradford Road, Tallahassee.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Popeyes_on_Lake_Bradford_Road,_Tallahassee.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "The Bushranger"
+  },
+  {
+    "restaurant": "In-N-Out",
+    "status": "ok",
+    "file": "in-n-out.jpg",
+    "commonsTitle": "File:Exterior sign of an In-N-Out Burger location.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Exterior_sign_of_an_In-N-Out_Burger_location.jpg",
+    "license": "CC BY 4.0",
+    "author": "Jackg98"
+  },
+  {
+    "restaurant": "Five Guys",
+    "status": "ok",
+    "file": "five-guys.jpg",
+    "commonsTitle": "File:A Five Guys restaurant exterior with outdoor seating in London.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:A_Five_Guys_restaurant_exterior_with_outdoor_seating_in_London.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Oleg Yunakov"
+  },
+  {
+    "restaurant": "Starbucks",
+    "status": "ok",
+    "file": "starbucks.jpg",
+    "commonsTitle": "File:Starbucks, Douglas.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Starbucks,_Douglas.jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "Michael Rivera"
+  },
+  {
+    "restaurant": "Dunkin'",
+    "status": "ok",
+    "file": "dunkin.jpg",
+    "commonsTitle": "File:A Dunkin' Donuts restaurant in Hiawassee, Georgia, United States 01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:A_Dunkin%27_Donuts_restaurant_in_Hiawassee,_Georgia,_United_States_01.jpg",
+    "license": "CC BY 4.0",
+    "author": "Harrison Keely"
+  }
+]
